@@ -66,11 +66,13 @@ function Profile(){
                     <option key={i} value={aziz} >{aziz}</option>
                 ))}
               </select> <br /><br />
-             <button type="Submit">Envoi</button> <br /><br />
+             <button type="Submit" className="btn btn-primary w-100">Envoi</button> <br /><br />
             </form>
 
             {/*Haga khedemenah b useNavegate hia li ghadi dena l  page l9edima */}
-             <button onClick={hadelNavigate}>gooo back</button>   
+             <button onClick={hadelNavigate} className="btn btn-danger w-100">
+                gooo back
+            </button>   
 
             
 

@@ -17,4 +17,4 @@ function ProductList() {
   );
 }
 
-export default  productList;
+export default  ProductList;

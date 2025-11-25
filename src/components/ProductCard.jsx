@@ -1,11 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 
 function ProductCard({ product }) {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
+
+  // hade function hia deyale retoure la page l9edima oula kdire redirection l lapage dyale details
+
+  function handleClick() {
+    navigate(`/product/${product.id}`);
+  }
   return (
     <div className="card">
 
@@ -23,14 +29,17 @@ function ProductCard({ product }) {
         <h5 className="card-title">{product.title}</h5>
         <p>{product.price}</p>
 
-            <Link to={`/product/${product.id}`} className="btn btn-danger w-100">
+            {/* <Link to={`/product/${product.id}`} className="btn btn-danger w-100">
                 Voir détails
-            </Link>
+            </Link> */}
+            <button onClick={handleClick} className="btn btn-danger w-100">
+                Voir détails
+            </button>
       </div>    
 
       <div>
         <Link to={"/Profilname"}>
-          <button >Voir profille name </button>
+          <button className="btn btn-primary w-100">Voir profille name </button>
         </Link>
       </div>
     </div>
