@@ -37,22 +37,27 @@ function Profile(){
         <div>
             <h1>remplaire form babe</h1>
             <form onSubmit={HandelSubmit}>
-              Name : <input type="text" placeholder="enter voter name" value={nom}
+              Name : <input type="text" placeholder="enter voter name" className="btn w-100 mt-4 border-black"  
+              value={nom}
               onChange={(e)=> setName(e.target.value)}
               /> <br /><br />
 
-              Prename : <input type="text" placeholder="enter voter prename" value={prenom}
+              Prename : <input type="text" placeholder="enter voter prename" className="btn w-100 mt-4 border-black" 
+              value={prenom}
               onChange={(e)=> setprename(e.target.value)}
               /> <br /><br />
 
-              Email : <input type="text" placeholder="enter voter email" value={email}
+              Email : <input type="text" placeholder="enter voter email" className="btn w-100 mt-4 border-black"  
+              value={email}
               onChange={(e)=> setEmail(e.target.value)}
               /><br /><br />
 
                 {/* hadi hia selection li fiha gha les année ou  rah khedama b map  */}
 
-              Anneé : <select value={select} onChange={(e)=>setSelector(e.target.value)}>
-                <option value="">====Choise Année====</option>
+              Anneé : <select value={select} onChange={(e)=>setSelector(e.target.value)} className="btn w-100 mt-4 border-black" >
+                <option value="">
+                   ======================================================Choise Année======================================================
+                </option>
                     {option.map((aziz,i)=>(
                         <option key={i} value={aziz}>{aziz}</option>
                     ))}
@@ -60,19 +65,35 @@ function Profile(){
 
               {/* hadi hia l selection  tania li rah fiha gha les mois  mekhedoma b map  */}
               
-              Mois : <select value={select1} onChange={(e)=>setSelector1(e.target.value)}>
-                <option value="">====Choise Mois====</option>
+              Mois : <select value={select1} onChange={(e)=>setSelector1(e.target.value)} className="btn w-100 mt-4 border-black" >
+                <option value="">
+                    ======================================================Choise Mois======================================================
+                </option>
                 {option1.map((aziz,i)=>(
                     <option key={i} value={aziz} >{aziz}</option>
                 ))}
               </select> <br /><br />
+              <h3>Hadi hia li ktekhali data teban f  alert </h3>
              <button type="Submit" className="btn btn-primary w-100">Envoi</button> <br /><br />
             </form>
 
             {/*Haga khedemenah b useNavegate hia li ghadi dena l  page l9edima */}
+
+            <h3>Hadi Retour page d'accueil avec useNavigate</h3>
              <button onClick={hadelNavigate} className="btn btn-danger w-100">
                 gooo back
-            </button>   
+            </button> 
+
+            {/* Hada  retour l page l9edima  b Link  */}
+            <div>
+                <h3>Hadi Retour page d'accueil avec Link</h3>
+                <Link to={"/"}>
+                  <button className="btn btn-success w-100 mt-4">
+                    Retour page d'accueil avec Link
+                  </button>
+                </Link>
+                
+            </div>  
 
             
 
