@@ -2,7 +2,7 @@ import React from 'react';
 import { products } from '../data/products';
 import ProductCard from './ProductCard';
 
-export default function ProductList() {
+function ProductList() {
   return (
     <div>
       <h2 className="mb-4">Ordinateurs portables</h2>
@@ -16,3 +16,5 @@ export default function ProductList() {
     </div>
   );
 }
+
+export default  productList;

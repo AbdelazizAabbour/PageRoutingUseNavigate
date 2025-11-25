@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { products } from '../data/products';
 
-export default function ProductDetail() {
+function ProductDetail() {
   
   const { id } = useParams();
   const product = products.find((p) => p.id === +id);
@@ -21,3 +21,6 @@ export default function ProductDetail() {
     </div>
   );
 }
+
+
+export default  ProductDetail;  

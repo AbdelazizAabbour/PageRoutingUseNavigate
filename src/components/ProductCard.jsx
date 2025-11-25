@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 
-export default function ProductCard({ product }) {
+function ProductCard({ product }) {
   // const navigate = useNavigate();
   return (
     <div className="card">
@@ -36,3 +36,5 @@ export default function ProductCard({ product }) {
     </div>
   );
 }
+
+export default  ProductCard;  
